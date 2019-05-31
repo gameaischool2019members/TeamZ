@@ -81,6 +81,9 @@ def treeMap(level, box):
 def getBoxSize(box):
 	return (box.maxx - box.minx, box.maxy - box.miny, box.maxz - box.minz)
 
+def getBoxMid(box):
+	return ((box.maxx-1 - box.minx)/2, (box.maxy-1 - box.miny)/2, (box.maxz-1 - box.minz)/2)
+
 # returns an array of blocks after raytracing from (x1,y1,z1) to (x2,y2,z2)
 # this uses Bresenham 3d algorithm, taken from a modified version written by Bob Pendleton  
 def raytrace((x1, y1, z1), (x2, y2, z2)):
